@@ -1,0 +1,142 @@
+.header {
+    margin-top: 70px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 550px;
+    transform: translateX(-30px);
+    transition: all 0.5s;
+    opacity: 0;
+ }
+ 
+ 
+ .header img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+ }
+ 
+ .header h1,
+ .header h3 {
+    position: absolute;
+ }
+ 
+ .header h1 {
+    top: -50px;
+    font-family: 'Pacifico', cursive;
+    font-size: 4rem;
+    color: white;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5), 0px 0px 5px rgba(0, 0, 0, 0.4), 0px 0px 10px rgba(0, 0, 0, 0.6);
+ }
+ .header h3 {
+    top: 80px;
+    font-family: 'Satisfy', cursive;
+    font-size: 2.6rem;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4), 0px 0px 6px rgba(0, 0, 0, 0.2);
+ }
+ .h4 {
+    top: 60px;
+    font-family: 'Satisfy', cursive;
+    font-size: 1.7rem;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.4), 0px 0px 6px rgba(0, 0, 0, 0.2);
+    text-align: center;
+ }
+ 
+ 
+ /* Animasyon */
+ 
+ .header {
+    transform: translateX(-30px);
+    transition: all 0.5s;
+    opacity: 0;
+ }
+ .header.active {
+    transform: translateX(0px);
+    opacity: 1;
+ }
+ 
+ .header h1,
+ .header h3 {
+    position: absolute;
+    transform: translateY(-20px);
+    transition: all 0.8s;
+    opacity: 0;
+ }
+ .header.active h1,
+ .header.active h3 {
+    position: absolute;
+    transform: translateY(0px);
+    opacity: 1;
+ }
+ 
+ .header.active h3 {
+    transition-delay: 0.3s;
+    position: absolute;
+    transform: translateY(0px);
+ 
+ }
+ 
+ .slider {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+ }
+ 
+ .slides {
+    display: flex;
+    width: 400%; /* 4 slide için genişliği ayarla */
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+ }
+ 
+ .slides2 {
+    display: flex;
+    width: 700%; /* 21 slide için genişliği ayarla */
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+ }
+ 
+ .slide, .slide2 {
+    width: 25%; /* Her bir slide'ın genişliği */
+    height: 100%;
+ }
+ 
+ .slide img, .slide2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+ }
+ 
+ 
+ .slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+ }
+ 
+ .slider button:disabled {
+    background-color: rgba(0, 0, 0, 0.3);
+    cursor: not-allowed;
+  }
+ 
+ .slider .prev {
+    left: 10px;
+ }
+ 
+ .slider .next {
+    right: 10px;
+ }
+ 
+ .slider button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+ }
+ 
